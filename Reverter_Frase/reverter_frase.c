@@ -14,8 +14,20 @@ int Sget(char *vetor, int TAM)
     }
 }
 
+#define tamanho 200
 int main()
 {
-    char frase_original[] = "Numero";
-    printf("%zu", strlen(frase_original));
+    int tam_atual = 0;
+    char frase_original[tamanho];
+    char frase_revertida[tamanho];
+    
+    printf("Digita uma frase de até 199 caracteres para reverte-la\n");
+    Sget(frase_original, tamanho);
+    
+    tam_atual = strlen(frase_original);
+
+    printf("A frase revertida esta abaixo\n");
+    for(int i = tam_atual-1; 0 < i; i--)
+        printf("%s", frase_original[i]);
+    return 0;
 }
