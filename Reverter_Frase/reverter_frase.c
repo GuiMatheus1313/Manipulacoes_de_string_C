@@ -16,5 +16,6 @@ int Sget(char *vetor, int TAM)
 
 int main()
 {
-
+    char frase_original[] = "Numero";
+    printf("%zu", strlen(frase_original));
 }
