@@ -44,7 +44,7 @@ int main()
 {
   char frase[200];
   //Mostrará para o usuário um display de mensagem e permitirá o input de string
-  printf("Digite uma string de até 199 caracteres para remover os caracteres multiplicados\n");
+  printf("Digite uma string de ate' 199 caracteres para remover os caracteres multiplicados\n");
   //Função que adapta o fgets()
   Sget(frase, 200);
 

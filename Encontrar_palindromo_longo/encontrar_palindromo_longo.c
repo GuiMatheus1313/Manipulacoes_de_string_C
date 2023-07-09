@@ -14,6 +14,7 @@ int Sget(char *vetor, int TAM)
     }
 }
 
+//Função que retorna se até aquela parte é palindromo ou não
 int PalindromoVF(char palavra[], int i, int j)
 {
     for(; i < j; i++, j--)
@@ -24,15 +25,14 @@ int PalindromoVF(char palavra[], int i, int j)
 
 void PalindromoLongo(char palavra[])
 {
+  //Variáveis para controle de loop
   int contador_palindromo = 0, limite = 1, salvacont = 0, i = 0, j = 0;
   salvacont = strlen(palavra);
-  //limite = contador;
-  //salvacont = limite;
-  //limite = 0;
 
-
+  //Loop em que inicia a transição da string
   while(i < salvacont)
   {
+    //Loop para percorrer e substituir os palindromos mais longos encontrados, com inicio e fim
     for(j = i; j < salvacont; j++)
         if(PalindromoVF(palavra, i, j) && (j - i + 1) > limite)
         {
@@ -41,7 +41,8 @@ void PalindromoLongo(char palavra[])
         }
     i++;
   }
-
+  
+  //Loop na qual retorna o palindromo mais longo da string ao usuário
   for(i = contador_palindromo; i < contador_palindromo + limite; i ++)
     printf("%c", palavra[i]);
 }
@@ -49,7 +50,9 @@ void PalindromoLongo(char palavra[])
 int main()
 {
     char palavra[200];
-    printf("Digite uma string para ver se é um anagrama de um palindromo\n");
+    printf("Digite uma string para encontrar o maior palindromo\n");
+    //Função que adapta o fgets()
     Sget(palavra, 200);
+    //Inicia o procedimento do processo
     PalindromoLongo(palavra);
 }

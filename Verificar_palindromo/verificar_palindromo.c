@@ -53,7 +53,7 @@ int verificarPalindromo(char palavra[])
 int main(void)
 {
   char palavra[200];
-  printf("Digite uma string para ver se é um anagrama de um palindromo\n");
+  printf("Digite uma string para ver se e' um anagrama de um palindromo\n");
   //Função que adapta o fgets()
   Sget(palavra, 200);
 

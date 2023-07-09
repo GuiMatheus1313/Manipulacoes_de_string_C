@@ -44,7 +44,7 @@ int main()
     int tam_atual = 0;
     char frase_original[tamanho];
     
-    printf("Digita uma string de até 199 caracteres para reverte-la\n");
+    printf("Digita uma string de ate' 199 caracteres para reverte-la\n");
 
     //Função que adapta o fgets()
     Sget(frase_original, tamanho);
