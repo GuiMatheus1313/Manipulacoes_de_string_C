@@ -1,0 +1,13 @@
+Para executar um dos programas, siga o passo-a-passo:
+
+-Instale um compilador C para o windows powershell [GNU, por exemplo]
+
+-Abra o windows powershell
+
+-Utilize o comando cd para chegar até a pasta "Programas executáveis"
+
+-digite: .\[nomedoprograma].exe 
+
+-Para utilizar os outros programas, apenas repita o último passo.
+____________________
+Código fonte: https://github.com/GuiMatheus1313/Manipulacoes_de_string_C
