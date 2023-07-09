@@ -14,6 +14,20 @@ int Sget(char *vetor, int TAM)
     }
 }
 
+void ReverteFrase(char frase[], int tamanho)
+{
+    int i = 0, j = 0;
+
+    for(i = tamanho-1; i >= 0; i--)
+    {
+        if(frase[i] == ' ')
+        {
+            for(j = i+1; j < tamanho && frase[j] != ' '; j++)
+                printf("%c", frase[j]);
+        }
+    }
+}
+
 #define tamanho 200
 int main()
 {
@@ -25,9 +39,5 @@ int main()
     Sget(frase_original, tamanho);
     
     tam_atual = strlen(frase_original);
-
-    printf("A frase revertida esta abaixo\n");
-    for(int i = tam_atual-1; 0 < i; i--)
-        printf("%s", frase_original[i]);
-    return 0;
+    ReverteFrase(frase_original, tamanho);
 }
